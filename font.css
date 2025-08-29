@@ -1,0 +1,34 @@
+@font-face {
+    font-family: "Lato-Bold.ttf";
+    src: url(./fonts.css/static/Lato-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Roboto-Regular.ttf";
+    src: url(./fonts.css/static/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Roboto-MediumItalic.ttf";
+    src: url(./fonts.css/static/Roboto-MediumItalic.ttf);
+}
+
+@font-face {
+    font-family: "static/Roboto-Regular.ttf";
+    src: url(./fonts.css/static/Lato-LightItalic.ttf);
+}
+
+@font-face {
+    font-family: "static/Lato-LightItalic.ttf";
+    src: url(./fonts.css/static/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Montserrat-Light";
+    src: url(./fonts.css/static/Montserrat-Light.ttf);
+}
+
+@font-face {
+    font-family: "MySoul-Regular";
+    src: url(./fonts.css/static/MySoul-Regular.ttf);
+}

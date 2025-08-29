@@ -1,0 +1,397 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root{
+  --bg: #0f1724;         
+  --card-bg: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  --accent: #e11d48;   
+  --muted: #9aa4b2;
+  --glass: rgba(255,255,255,0.04);
+  --glass-2: rgba(255,255,255,0.02);
+  --glass-border: rgba(255,255,255,0.06);
+  --radius: 16px;
+  --line:rgba(255,255,255,0.15);
+  --muted2: rgba(255,255,255,0.72);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  background:  #000;
+  color:  #fff;
+  font-family:  'Roboto', sans-serif;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero__video {
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__logo {
+  max-width: 500px;
+  width: 80%;
+  pointer-events: none;
+}
+
+.container{
+  max-width:1200px;
+  margin:0 auto;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap:24px;
+  margin-bottom:40px;
+}
+
+.cards > div{
+  display:flex;
+  gap:28px;
+  align-items:center;
+  background: var(--card-bg);
+  border: 1px solid var(--glass-border);
+  padding:22px;
+  border-radius: var(--radius);
+  backdrop-filter: blur(6px) saturate(120%);
+  transition: transform .32s cubic-bezier(.2,.9,.3,1), box-shadow .32s;
+  transform-origin: center;
+  overflow:hidden;
+  position:relative;
+}
+
+.cards > div:nth-child(even){
+  flex-direction: row-reverse;
+}
+
+[class$="__text"]{
+  flex:1 1 55%;
+  min-width:0;
+  padding:6px 4px;
+}
+
+[class$="__text"] h2{
+  margin:0 0 10px 0;
+  font-size:20px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  color: #ffffff;
+  line-height:1.1;
+  display:inline-block;
+  position:relative;
+}
+
+[class$="__text"] h2::after{
+  content:"";
+  display:block;
+  width:48px;
+  height:4px;
+  border-radius:3px;
+  margin-top:10px;
+  background: linear-gradient(90deg, var(--accent), #ff7ab6);
+  box-shadow: 0 6px 18px rgba(225,29,72,0.12);
+}
+
+[class$="__text"] p{
+  margin:12px 0 0 0;
+  color:var(--muted);
+  font-weight:400;
+  font-size:15px;
+}
+
+[class$="__img"]{
+  flex: 0 0 44%;
+  min-width:260px;
+  height:220px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow: 0 6px 30px rgba(2,6,23,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+}
+
+[class$="__img"] img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transition: transform .6s cubic-bezier(.2,.9,.3,1);
+  will-change: transform;
+}
+
+.cards > div:hover{
+  transform: translateY(-8px) scale(1.002);
+  box-shadow: 0 18px 40px rgba(2,8,23,0.65);
+  border-color: rgba(255,255,255,0.09);
+}
+
+.cards > div:hover [class$="__img"] img{
+  transform: scale(1.06) rotate(.3deg);
+}
+
+.page-title{
+  text-align:center;
+  margin:20px 0 14px 0;
+  font-size:28px;
+  font-weight:700;
+  color:#ffffff;
+  letter-spacing:0.6px;
+}
+
+  main{
+    padding:60px 20px
+  }
+  
+  .page-title{
+    font-size:48px;
+    font-weight:400;
+    margin:0 0 40px 60px;
+  }
+  
+  
+  .specs{
+    max-width:1100px;
+    margin:0 auto;
+    border-radius:4px;
+    overflow:hidden;
+    background:var(--panel);
+    border-top:1px solid rgba(128, 126, 126, 0.603);
+    margin-top: 20px;
+  }
+  
+  
+  .spec-row{
+    display:flex;
+    align-items:center;
+    border-top:1px solid var(--line);
+
+  }
+  .spec-row:first-child{
+    border-top:none
+  }
+  
+  
+  .label{
+    flex:1;
+    font-size:18px;
+    color:var(--muted2);
+    padding: 0 0 0 10px;
+  }
+  
+  
+  .value{
+    flex:2;
+    text-align:center;
+    font-family:"Oswald", sans-serif;
+    font-weight:300;
+    font-size:96px;
+  }
+
+footer {
+  background: #000;
+  padding: 60px 0;
+  position: relative;
+  color: #aaa;
+}
+
+.footer-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-block {
+  flex: 1 1 200px;
+}
+
+.footer-block h4 {
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.footer-block ul li a {
+  margin-bottom: 10px;
+  color: white;
+}
+
+.footer-block ul li a:hover {
+  color: gold;
+}
+
+.socials a {
+  margin-right: 15px;
+  font-size: 20px;
+  transition: color 0.3s;
+  color: white;
+}
+
+.socials a:hover {
+  color: gold;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+  border-top: 1px solid #222;
+  padding-top: 20px;
+}
+
+/* ===============================
+   MEDIA FIX — rasmlarni tepaga/markazga chiqarish
+   (Bugatti-styled responsive behavior)
+   Add this at the end of your CSS file
+   =============================== */
+
+/* Tablet & small laptops: rasmni tepaga chiqarish */
+@media (max-width: 900px) {
+  /* 1) Har bir card vertical oqimga o‘tadi */
+  .cards > div,
+  .card1, .card2, .card3 {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    text-align: left; /* matn markazlashtirishni istasangiz "center" qilib qo'ying */
+    gap: 18px;
+    padding: 20px !important;
+  }
+
+  /* 2) oldindan row-reverse qoidasini bekor qilamiz */
+  .cards > div:nth-child(even) {
+    flex-direction: column !important;
+  }
+
+  /* 3) rasm konteynerini to'liq kenglik va mos balandlikka qaytaramiz */
+  [class$="__img"] {
+    order: -1 !important;            /* rasmni tepaga olib chiqadi */
+    flex: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-width: 0 !important;         /* oldingi min-width problema uchun */
+    margin: 0 auto 16px;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+  }
+
+  /* 4) rasm ichidagi <img> to'liq moslashuvchan bo'lsin */
+  [class$="__img"] img {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+    max-height: 420px;               /* kerak bo'lsa sozlang */
+    transition: transform .45s ease !important;
+  }
+
+  /* 5) matn blokini rasm ostiga keltirish va paddingni qisqartirish */
+  [class$="__text"] {
+    order: 0 !important;
+    padding: 8px 6px !important;
+  }
+
+  /* 6) sarlavha va paragraf uchun qulayrozgarish */
+  [class$="__text"] h2 {
+    font-size: 18px !important;
+    line-height: 1.15 !important;
+  }
+  [class$="__text"] p {
+    font-size: 14px !important;
+    color: var(--muted, rgba(255,255,255,0.7)) !important;
+  }
+
+  /* 7) specs va footer uchun moslashuvchanlik */
+  .specs { padding: 20px !important; }
+  .spec-row { flex-direction: column; gap: 10px; text-align: center; }
+  .label { padding-left: 0 !important; }
+  .value { font-size: clamp(36px, 9vw, 60px) !important; }
+
+  /* Agar sizda scroll yoki scrollbar hizmasi paydo bo'layotgan bo'lsa */
+  body, html {
+    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden !important;
+  }
+}
+
+/* Telefonlar: yanada ixcham variantlar */
+@media (max-width: 420px) {
+  .cards > div,
+  .card1, .card2, .card3 {
+    padding: 14px !important;
+    gap: 12px;
+    border-radius: 12px;
+  }
+
+  [class$="__img"] img {
+    max-height: 260px;
+  }
+
+  [class$="__text"] h2 {
+    font-size: 16px !important;
+  }
+  [class$="__text"] p {
+    font-size: 13px !important;
+  }
+
+  .page-title {
+    font-size: 24px !important;
+    margin-left: 0 !important;
+    text-align: center !important;
+  }
+
+  footer { padding: 30px 12px !important; }
+  .footer-container { gap: 16px !important; flex-direction: column; text-align: center; }
+}
+/* Faqat 576px ostida layoutni bitta ustunli qil */
+@media (max-width: 596px) {
+  .page-title{
+    font-size: 40px;
+  }
+  .spec-row {
+    grid-template-columns: 1fr;
+    padding: 10px 8px;
+  }
+  .value {
+    text-align: left;
+    margin-top: 8px;
+  }
+}
+
